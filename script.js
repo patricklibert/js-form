@@ -5,6 +5,7 @@ gmail.addEventListener("blur", verifyEmail);
 
 
 function verifyPassword(input) {
+     let reg2 = "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])";
     input = input.srcElement;
     if (input.value !== document.getElementById('inpPassword').value) {
         // the provided value doesn’t match the primary email address
@@ -13,14 +14,23 @@ function verifyPassword(input) {
         // input is valid -- reset the error message
         input.setCustomValidity('');
     }
+    if (!input.value.match(reg2)) {
+        input.setCustomValidity('Password must contain one uppercase letter and one numeric value');
+    } else {
+        // input is valid -- reset the error message
+        input.setCustomValidity('');
+    }
+
 }
 
 
 function verifyEmail(input2) {
+
+
     input2 = input2.srcElement;
-    let reg = "^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$";
-    //if (input2.toString().match(reg)) {
-    if (input2.toString()==='false'){
+    let reg = "[a-zA-Z0-9]+\\@gmail.com";
+    if (!input2.value.match(reg)) {
+    //if (input2.toString()==='false'){
         // the provided value doesn’t match the primary email address
         input2.setCustomValidity('Is not an gmail address...');
     } else {
@@ -46,6 +56,20 @@ function store() {
     inhoud.phonenumber = document.getElementById('inpPhoneNumber').value;
     inhoud.age = document.getElementById('inpAge').value;
     inhoud.hobbies = document.getElementById('inpHobbies').value;
+
+    localStorage.setItem("storageInhoud", JSON.stringify(inhoud));
+    localStorage.setItem("storageFirstName",inhoud.firstname);
+    localStorage.setItem("storageLastName",inhoud.lastName);
+    localStorage.setItem("storageUserName",inhoud.username);
+    localStorage.setItem("storageEmail",inhoud.email);
+    localStorage.setItem("storagePassword",inhoud.password);
+    localStorage.setItem("storageConfirmpassword",inhoud.confirmpassword);
+    localStorage.setItem("storageAddress",inhoud.address);
+    localStorage.setItem("storageCity",inhoud.city);
+    localStorage.setItem("storageZip",inhoud.zip);
+    localStorage.setItem("storagePhoneNumber",inhoud.phonenumber);
+    localStorage.setItem("storageAge",inhoud.age);
+    localStorage.setItem("storageHobbies",inhoud.hobbies);
 
 
 }

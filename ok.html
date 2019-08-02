@@ -8,5 +8,19 @@
 </head>
 <body>
     <p>registration successfull</p>
+    <div id="gegevens">
+
+    </div>
+<script>
+    let d = document.getElementById("gegevens");
+    let inhoud = JSON.parse(localStorage.getItem("storageInhoud"));
+
+    d.innerHTML = inhoud.firstname + "<br>" + inhoud.lastName + "<br>" + inhoud.username + "<br>" + inhoud.email + "<br>" + inhoud.address + "<br>" + inhoud.city + "<br>" +
+            inhoud.zip + "<br>";
+
+
+
+
+</script>
 </body>
 </html>

@@ -1,3 +1,28 @@
+body {
+  border: 0;
+  margin: 0;
+}
 
+input:invalid {
+  color: red;
+}
+
+input:focus:invalid {
+  outline: 2px solid red;
+}
+
+.coolblue-bar--logo-image {
+  position: absolute;
+  height: 3.2rem;
+  left: 15px;
+  top: 0;
+}
+
+#header {
+  height: 3.2rem;
+  width: 100%;
+  background-color: #0090e3;
+  border: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */
