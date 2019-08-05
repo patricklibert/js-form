@@ -10,11 +10,7 @@ function verifyPassword(input) {
     if (input.value !== document.getElementById('inpPassword').value) {
         // the provided value doesn’t match the primary email address
         input.setCustomValidity('The two passwords must match.');
-    } else {
-        // input is valid -- reset the error message
-        input.setCustomValidity('');
-    }
-    if (!input.value.match(reg2)) {
+    } else if (!input.value.match(reg2)) {
         input.setCustomValidity('Password must contain one uppercase letter and one numeric value');
     } else {
         // input is valid -- reset the error message

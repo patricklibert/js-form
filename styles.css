@@ -19,10 +19,83 @@ input:focus:invalid {
 }
 
 #header {
+  display: flex;
   height: 3.2rem;
   width: 100%;
   background-color: #0090e3;
   border: 0;
+  justify-content: space-between;
+}
+
+#headerright {
+  display: flex;
+  align-items: center;
+}
+
+.icon-svg {
+  height: 1.2rem;
+}
+
+.icon-svg--size-6 {
+  margin-right: 15px;
+}
+
+.icon-svg--size-5 {
+  margin-right: 15px;
+}
+
+.login {
+  color: white;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.coolbar-navigation--icon-arrow {
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+.boldie {
+  margin-right: 5px;
+}
+
+.invulformulier {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+}
+
+.wantoflex {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0;
+}
+
+.create-text {
+  color: #285dab;
+  font-size: 25px;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+  height: 25px;
+}
+
+.zenden {
+  background-color: #00b900;
+  height: 25px;
+  width: 200px;
 }
 
 /*# sourceMappingURL=styles.css.map */
